@@ -588,7 +588,7 @@
             loader.style.display = 'flex';
             try {
                  switch(taskType) {
-                    case 'interstitial': adPromise = window.show_8690632(); break;
+                    case 'interstitial': adPromise = window.show_10286500(); break;
                     case 'popup': adPromise = window.show_10286500('pop'); break;
                     case 'inApp': adPromise = window.show_10286500({ type: 'inApp', inAppSettings: { frequency: 2, capping: 0.1, interval: 30, timeout: 5, everyPage: false } }); break;
                     case 'miniApp': adPromise = window.show_10286500(); break;
@@ -602,8 +602,8 @@
                 userData.dailyAdCount = newCount;
                 
                 let rewardAmount = 0;
-                if (taskType === 'miniApp') rewardAmount = 100;
-                else if (taskType !== 'inApp') rewardAmount = 50;
+                if (taskType === 'miniApp') rewardAmount = 10;
+                else if (taskType !== 'inApp') rewardAmount = 15;
 
                 if (rewardAmount > 0) {
                     await updateBalance(rewardAmount);
@@ -632,5 +632,6 @@
 </body>
 
 </html>
+
 
 
